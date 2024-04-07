@@ -1,0 +1,5 @@
+INP
+STA 15
+ADD 15
+BRA 3
+HLT
