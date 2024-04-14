@@ -1,0 +1,35 @@
+INP
+STA number
+INP
+STA base
+INP
+STA shift
+LDA shift
+SUB one
+STA shift
+loopshift   LDA shift
+BRZ   loopmain
+SUB one
+STA shift
+LDA base
+ADD base
+STA base
+BRA   loopshift
+loopmain LDA base
+BRZ end
+SUB one
+STA base
+LDA number
+ADD ans
+STA ans
+BRA   loopmain
+end   LDA ans
+OUT
+SUB ans
+STA ans
+HLT
+ans   DAT
+base   DAT
+shift   DAT
+one   DAT 1
+number   DAT 
